@@ -11,10 +11,12 @@ public class ResponseDTO {
     private List<String> messages;
 
     public ResponseDTO(List<String> messages){
+
         this.messages = messages;
     }
 
     public ResponseDTO(String message) {
+
         this.messages = Arrays.asList(message);
     }
 }
