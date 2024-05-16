@@ -31,6 +31,3 @@ public class CustomerService {
         return customerMapper.customerToDTO(customerToSave);
     }
 }
-
-//verificar configurações de banco de dados
-//testar endpoint de salvar e listar
