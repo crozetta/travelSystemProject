@@ -38,9 +38,9 @@ public class Customer {
     @Column(name = "rg_number")
     private Long rgNumber;
 
-    @OneToOne(mappedBy = "customer_profile")
-    @Column(name = "id_profile")
-    private Long profile;
+    @ManyToOne
+    @JoinColumn(name = "profile_id")
+    private CustomerProfile profile;
 
     @Column(name = "phone_number")
     private Long phoneNumber;

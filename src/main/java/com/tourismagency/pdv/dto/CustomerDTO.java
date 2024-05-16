@@ -1,5 +1,6 @@
 package com.tourismagency.pdv.dto;
 
+import com.tourismagency.pdv.entity.CustomerProfile;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,7 @@ public class CustomerDTO {
     private long idEnrollment;
     private Long EnrollmentNumber;
     private Long rgNumber;
-    private Long profile;
+    private CustomerProfile profile;
     private Long phoneNumber;
     private Long cellNumber;
     private String email;

@@ -2,15 +2,11 @@ package com.tourismagency.pdv.mapper;
 
 import com.tourismagency.pdv.dto.CustomerDTO;
 import com.tourismagency.pdv.entity.Customer;
-import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-import java.util.stream.Collectors;
-
-import java.util.stream.Collectors;
-
+@Configuration
 public class CustomerMapper {
-
-    private ModelMapper mapper = new ModelMapper();
 
     public CustomerDTO customerToDTO(Customer customer){
         return new CustomerDTO(customer.getId(),
@@ -35,5 +31,30 @@ public class CustomerMapper {
                 customer.getPassport(),
                 customer.getPassportValidity(),
                 customer.getObservation());
+    }
+
+    public Customer mapToCustomer(CustomerDTO customerDTO){
+        return new Customer(customerDTO.getId(),
+                customerDTO.getName(),
+                customerDTO.getBirtDate(),
+                customerDTO.getIdEnrollment(),
+                customerDTO.getEnrollmentNumber(),
+                customerDTO.getRgNumber(),
+                customerDTO.getProfile(),
+                customerDTO.getPhoneNumber(),
+                customerDTO.getCellNumber(),
+                customerDTO.getEmail(),
+                customerDTO.getAddress(),
+                customerDTO.getAddressNumber(),
+                customerDTO.getNeighborhood(),
+                customerDTO.getZipCode(),
+                customerDTO.getCity(),
+                customerDTO.getState(),
+                customerDTO.getCountry(),
+                customerDTO.getProfession(),
+                customerDTO.getSex(),
+                customerDTO.getPassport(),
+                customerDTO.getPassportValidity(),
+                customerDTO.getObservation());
     }
 }
